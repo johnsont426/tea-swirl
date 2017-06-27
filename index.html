@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>Tea Swirl</title>
 	<link rel="stylesheet" href="stylesheets/style.css">
 	<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Source+Sans+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Roboto+Condensed|Source+Sans+Pro" rel="stylesheet">
 </head>
 <body>
 	<header>
-		<nav>
+		<nav class="flex">
 			<div class="container flex">
 				<div class="logo flex">
 					<img src="images/plain-logo.png" alt="tea swirl logo" class="logo-img">
-					<img src="images/teaswirl.png" alt="" class="logo-text">
-				</div>
+					<h1>Tea Swirl</h1>
+				</div>	
 				<ul class="flex">
 					<li><a href="#">About</a></li>
 					<li><a href="#">Menu</a></li>
@@ -22,28 +23,33 @@
 				</ul>
 			</div>
 		</nav>
-		<div class="bg-1"></div>
+		<div class="bg bg-1"></div>
 		<div class="header-text">
 			<h1>Tea Swirl</h1>
-			<p>where fresh brewed tea meets soda.</p>
+			<p>Boba tea beverage laboratory</p>
 		</div>
+		<!-- <div class="header-social-links flex">
+			<a href=""><i class="fa fa-facebook" aria-hidden="true"></i></i></a>
+			<a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+			<a href=""><i class="fa fa-yelp" aria-hidden="true"></i></a>
+		</div> -->
 	</header>
 	<main>
 		<div class="news">
 			<div class="main-content flex">
 				<div class="content-title">
-					<h1>NEWS</h1>
+					<h1>News</h1>
 				</div>
 				<p>Tea Swirl is a modernize Tea Store that combines Western and Eastern beverage elements. The owners of Tea Swirl are originally from Taiwan and graduated from Arizona State University. After graduating from ASU, the team decided to start a Tea shop in Tempe, Arizona. They want to bring the Taiwanese cultural to the Western Culture They came up with ideas of mixing the Western beverage elements (Soda) and Eastern beverage elements (Tea) and creates the most unique flavor of beverages.</p>
 			</div>
 		</div>
-		<div class="bg-1"></div>
+		<div class="bg bg-2"></div>
 		<div class="about">
 			<h1>"Everything is freshly brewed and made."</h1>
 			<div class="flex" id="about-blocks">
 				<div class="about-block">
-					<div class="about-img-container">
-						<img src="images/img1.jpg" alt="">
+					<div class="about-img-container" id="first">
+						<img src="images/img4.jpg" alt="">
 					</div>
 					<div class="about-text-container">
 						<h1>Our Ingredient</h1>
@@ -51,46 +57,58 @@
 					</div>
 				</div>
 				<div class="about-block">
-					<div class="about-img-container">
-						<img src="images/img3.jpg" alt="">
+					<div class="about-img-container" id="second">
+						<img src="images/img6.jpg" alt="">
 					</div>
 					<div class="about-text-container">
-						<h1>Our Ingredient</h1>
-						<p>All of our ingredients are either imported from Taiwan or from the local market here in Arizona.</p>
+						<h1>When Tea Meets Soda</h1>
+						<p>Perfect combination of Western and Eastern beverage element</p>
 					</div>
 				</div>
 				<div class="about-block">
-					<div class="about-img-container">
-						<img src="images/img2.jpg" alt="">
+					<div class="about-img-container" id="third">
+						<img src="images/img5.jpg" alt="">
 					</div>
 					<div class="about-text-container">
-						<h1>Our Ingredient</h1>
-						<p>All of our ingredients are either imported from Taiwan or from the local market here in Arizona.</p>
+						<h1>Fresh Brew and Made</h1>
+						<p>Bring you a whole new knowledge of Tea beverage</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="bg-2"></div>
+		<div class="bg bg-3"></div>
 		<div class="menu">
 			<div class="menu-h1-div">
-				<h1>MEMU</h1>
+				<h1>Menu</h1>
 			</div>
 			<img src="images/menu.jpg" alt="">
 		</div>
-		<div class="bg-2"></div>
+		<div class="bg bg-4"></div>
 		<div class="contact">
 			<div class="main-content flex">
 				<div class="content-title">
-					<h1>Contact</h1>
-				</div>	
-				<p>Tea Swirl is a modernize Tea Store that combines Western and Eastern beverage elements. The owners of Tea Swirl are originally from Taiwan and graduated from Arizona State University. After graduating from ASU, the team decided to start a Tea shop in Tempe, Arizona. They want to bring the Taiwanese cultural to the Western Culture They came up with ideas of mixing the Western beverage elements (Soda) and Eastern beverage elements (Tea) and creates the most unique flavor of beverages.
-				All of the ingredients are either imported from Taiwan or from the local market here in Arizona.
-				Tea Swirl's principle for their product is: "Everything is freshly brewed and made." Tea Swirl wants to bring their customers to a whole new knowledge of Tea beverages, as well as giving the customers the best experiences.</p>
+					<h1>Contact & Location</h1>
+				</div>
+				<div class="contact-info">
+					<p><i class="fa fa-phone" aria-hidden="true"></i>  (480)479-4255</p>
+					<br>
+					<p><i class="fa fa-map-marker" aria-hidden="true"></i>  725 S. Rural Rd. Ste 117, Tempe, AZ 85281</p>
+					<br>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.021080496336!2d-111.92806108509772!3d33.42269475808998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b08e725fcaf9d%3A0xda2c7a881d014a9e!2s725+S+Rural+Rd+%23117%2C+Tempe%2C+AZ+85281!5e0!3m2!1szh-TW!2sus!4v1498344441978" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
 			</div>
 		</div>
 	</main>
 	<footer>
 		<h1>TEA SWIRL</h1>
+		<div class="social">
+			<a href=""><i class="fa fa-facebook" aria-hidden="true"></i></i></a>
+			<a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+			<a href=""><i class="fa fa-yelp" aria-hidden="true"></i></a>
+		</div>
+		<p><i class="fa fa-copyright" aria-hidden="true"></i>2017 Tea Swirl All Rights Reserved</p>
 	</footer>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="index.js"></script>
 </html>
