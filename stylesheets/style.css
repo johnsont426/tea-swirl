@@ -102,13 +102,14 @@ header {
       font-size: 1.5em;
       color: white; }
   header ul {
+    display: flex;
     width: 300px;
     list-style: none;
     height: 50px;
     justify-content: flex-end;
     align-items: center; }
     header ul li {
-      font-size: 1.2em;
+      font-size: 1.3em;
       display: block;
       text-align: right;
       margin-left: 30px;
@@ -139,6 +140,7 @@ header {
     color: #ff5300; }
 
 .logo {
+  display: flex;
   align-items: center; }
   .logo .logo-img {
     height: 66px;
@@ -153,24 +155,26 @@ header {
     margin-left: 5px;
     z-index: 3;
     letter-spacing: 1.2px; }
-  .logo .logo-text {
-    width: 85px;
-    height: 23px;
-    z-index: 1; }
 
 nav {
+  display: flex;
   z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
-  height: 85px;
+  height: 100px;
   background-color: white;
-  align-items: center; }
+  align-items: center;
+  transition: height 0.8s; }
   nav > .container {
+    display: flex;
     align-items: center;
     justify-content: space-between; }
+
+.active {
+  border-bottom: 3px solid #5f41a1; }
 
 /*  main  */
 main {
@@ -199,34 +203,37 @@ main {
     height: 60vh;
     background-image: url("../images/bg-img4.jpg"); }
 
-.bg-1 {
-  /*opacity: 0.5;*/ }
-
-.bg-2 {
-  width: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /*opacity: 0.8;*/ }
-
 .news .main-content, .about .main-content, .contact .main-content {
+  display: flex;
   justify-content: space-between;
   width: 60%;
   margin: 10px auto;
   padding: 5% 0; }
+  @media (max-width: 1025px) {
+    .news .main-content, .about .main-content, .contact .main-content {
+      display: flex-wrap;
+      width: 80%;
+      justify-content: center; } }
   .news .main-content h1, .about .main-content h1, .contact .main-content h1 {
     font-size: 0.8em;
     display: inline; }
 .news .content-title, .about .content-title, .contact .content-title {
   width: 25%;
   font-size: 3em;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   margin-right: 10px; }
+  @media (max-width: 1025px) {
+    .news .content-title, .about .content-title, .contact .content-title {
+      text-align: center;
+      width: 100%; } }
 .news p, .about p, .contact p {
   line-height: 150%;
   width: 65%;
   font-size: 1.2em; }
+  @media (max-width: 1025px) {
+    .news p, .about p, .contact p {
+      width: 100%;
+      text-align: center; } }
 
 .news h1 {
   border-bottom: 3px solid #ff5300; }
@@ -238,6 +245,7 @@ main {
   font-size: 2.5em; }
 
 #about-blocks {
+  display: flex;
   width: 80%;
   margin: 0 auto;
   justify-content: space-between; }
@@ -247,7 +255,10 @@ main {
   .about-block .about-text-container {
     width: 90%;
     margin: 7vh auto;
-    height: 50vh; }
+    height: 25em; }
+    @media (max-width: 980px) {
+      .about-block .about-text-container {
+        margin: 3vh auto; } }
   .about-block img {
     opacity: 0.9;
     width: 100%; }
@@ -267,16 +278,15 @@ main {
   width: 300px;
   height: 300px;
   overflow: hidden;
-  margin: 0 auto;
-  /*&#first {
-  	border: 2px solid $purple;
-  }
-  &#second {
-  	border: 2px solid $orange;
-  }
-  &#third {
-  	border: 2px solid $blue;
-  }*/ }
+  margin: 0 auto; }
+  @media (max-width: 1140px) {
+    .about-img-container {
+      width: 250px;
+      height: 250px; } }
+  @media (max-width: 980px) {
+    .about-img-container {
+      width: 200px;
+      height: 200px; } }
 
 .menu {
   width: 60%;
@@ -293,11 +303,14 @@ main {
 
 .contact h1 {
   border-bottom: 3px solid #deba03; }
-.contact .contact-info p {
-  width: 100%;
-  text-align: left; }
-.contact .contact-info i {
-  margin-left: 5px; }
+.contact .contact-info {
+  display: flex;
+  flex-direction: column; }
+  .contact .contact-info p {
+    width: 100%;
+    text-align: left; }
+  .contact .contact-info i {
+    margin-left: 5px; }
 
 /*  footer  */
 footer h1 {
@@ -320,5 +333,7 @@ footer p {
   width: 300px;
   margin: 20px auto;
   color: #878787; }
+
+/*  responsive  */
 
 /*# sourceMappingURL=style.css.map */

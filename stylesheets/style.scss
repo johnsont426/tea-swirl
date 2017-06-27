@@ -63,6 +63,12 @@ $purple: rgb(171, 62, 152);
 $blue: rgb(95, 65, 161);
 $yellow: rgb(222, 186, 3);
 
+@mixin respond-to($query){
+	@media (max-width: $query){
+		@content
+	}
+}
+
 .container {
 	width: 90%;
 	margin: 0 auto;
@@ -114,13 +120,14 @@ header {
 		}
 	}
 	ul {
+		display: flex;
 		width: 300px;
 		list-style: none;
 		height: 50px;
 		justify-content: flex-end;
 		align-items: center;
 		li {
-			font-size: 1.2em;
+			font-size: 1.3em;
 			display: block;
 			text-align: right;
 			margin-left: 30px;
@@ -160,6 +167,7 @@ header {
 	}
 }
 .logo {
+	display: flex;
 	align-items: center;
 	.logo-img {
 		height: 66px;
@@ -177,29 +185,29 @@ header {
 		z-index: 3;
 		letter-spacing: 1.2px;
 	}
-	.logo-text {
-		width: 85px;
-		height: 23px;
-		z-index: 1;
-	}
 }
 	
 nav {
+	display: flex;
 	z-index: 10;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	overflow: hidden;
-	height: 85px;
+	height: 100px;
 	background-color: white;
 	align-items: center;
+	transition: height 0.8s;
 	> .container {
+		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
 }
-
+.active {
+	border-bottom: 3px solid $blue;
+}
 /*  main  */
 main {
 	position: relative;
@@ -231,25 +239,19 @@ main {
   	background-image: url('../images/bg-img4.jpg');
   }
 }
-.bg-1 {
-	
-  /*opacity: 0.5;*/
-}
-.bg-2 {
-	width: 100%;
-	
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /*opacity: 0.8;*/
-}
+
 .news, .about, .contact {
 	.main-content {
+		display: flex;
 		justify-content: space-between;
 		width: 60%;
 		margin: 10px auto;
 		padding: 5% 0;
+		@include respond-to(1025px) {
+			display: flex-wrap;
+			width: 80%;
+			justify-content: center;
+		}
 		h1 {
 			font-size: 0.8em;
 			display: inline;
@@ -258,13 +260,21 @@ main {
 	.content-title {
 		width: 25%;
 		font-size: 3em;
-		margin-bottom: 10px;
+		margin-bottom: 30px;
 		margin-right: 10px;
+		@include respond-to(1025px) {
+			text-align: center;
+			width: 100%;
+		}
 	}
 	p {
 		line-height: 150%;
 		width: 65%;
 		font-size: 1.2em;
+		@include respond-to(1025px) {
+			width: 100%;
+			text-align: center;
+		}
 	}
 }
 .news {
@@ -281,6 +291,7 @@ main {
 	}
 }
 #about-blocks {
+	display: flex;
 	width: 80%;
 	margin: 0 auto;
 	justify-content: space-between;
@@ -290,7 +301,10 @@ main {
 	.about-text-container {
 		width: 90%;
 		margin: 7vh auto;
-		height: 50vh;
+		height: 25em;
+		@include respond-to(980px) {
+			margin: 3vh auto;
+		}
 	}
 	img {
 		opacity: 0.9;
@@ -315,15 +329,14 @@ main {
 	height: 300px;
 	overflow: hidden;
 	margin: 0 auto;
-	/*&#first {
-		border: 2px solid $purple;
+	@include respond-to(1140px) {
+		width: 250px;
+		height: 250px;
 	}
-	&#second {
-		border: 2px solid $orange;
+	@include respond-to(980px) {
+		width: 200px;
+		height: 200px;
 	}
-	&#third {
-		border: 2px solid $blue;
-	}*/
 }
 
 .menu {
@@ -347,6 +360,8 @@ main {
 		border-bottom: 3px solid $yellow;
 	}
 	.contact-info {
+		display: flex;
+		flex-direction: column;
 		p {
 			width: 100%;
 			text-align: left;
@@ -385,3 +400,8 @@ footer {
 		color: rgb(135, 135, 135);
 	}
 }
+
+/*  responsive  */
+
+
+
