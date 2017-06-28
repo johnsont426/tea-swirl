@@ -102,7 +102,7 @@ a {
 header {
 	height: 95vh;
 	.header-text {
-		width: 50%;
+		width: 80%;
 		position: absolute;
 		top: 45%;
 		left: 15%;
@@ -113,6 +113,9 @@ header {
 			font-size: 3em;
 			font-weight: bold;
 			margin-bottom: 10px;
+			@include respond-to(600px) {
+				font-size: 2.5em;
+			}
 		}
 		p {
 			font-size: 1.5em;
@@ -126,6 +129,9 @@ header {
 		height: 50px;
 		justify-content: flex-end;
 		align-items: center;
+		@include respond-to(600px) {
+			display: none;
+		}
 		li {
 			font-size: 1.3em;
 			display: block;
@@ -145,19 +151,15 @@ header {
 		}
 	}
 }
-.header-social-links {
+/*.header-social-links {
 	justify-content: space-between;
-	width: 100px;
-	position: absolute;
-	top: 15%;
-	left: 85%;
-	z-index: 10;
+	width: 75px;
+	margin-left: 10px;
 	li:hover {
 		border-bottom: none;
 	}
 	i {
-		color: white;
-		font-size: 1.5em;
+		font-size: 0.8em;
 	}
 	a {
 		display: block;
@@ -165,7 +167,7 @@ header {
 	a:hover i {
 		color: $orange;
 	}
-}
+}*/
 .logo {
 	display: flex;
 	align-items: center;
@@ -219,6 +221,12 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @include respond-to(600px) {
+  	background-attachment: initial;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  }
   &.bg-1 {
   	background-image: url('../images/header-bg2.jpg');
   	height: 85vh;
@@ -229,28 +237,41 @@ main {
   &.bg-2{
   	height: 60vh;
   	background-image: url('../images/bg-img3.jpg');
+  	@include respond-to(600px) {
+  		height: 300px;
+  	}
   }
   &.bg-3 {
 		height: 60vh;
   	background-image: url('../images/bg-img2.jpg');
+  	@include respond-to(600px) {
+  		height: 300px;
+  	}
   }
   &.bg-4 {
 		height: 60vh;
   	background-image: url('../images/bg-img4.jpg');
+  	@include respond-to(600px) {
+  		height: 300px;
+  	}
   }
 }
 
 .news, .about, .contact {
+	margin: 40px 0;
 	.main-content {
 		display: flex;
 		justify-content: space-between;
 		width: 60%;
-		margin: 10px auto;
-		padding: 5% 0;
+		margin: 0 auto;
 		@include respond-to(1025px) {
-			display: flex-wrap;
+			display: block;
 			width: 80%;
 			justify-content: center;
+		}
+		@include respond-to(600px) {
+			width: 90%;
+			margin-bottom: 2em;
 		}
 		h1 {
 			font-size: 0.8em;
@@ -260,7 +281,7 @@ main {
 	.content-title {
 		width: 25%;
 		font-size: 3em;
-		margin-bottom: 30px;
+		margin-bottom: 50px;
 		margin-right: 10px;
 		@include respond-to(1025px) {
 			text-align: center;
@@ -286,8 +307,14 @@ main {
 	> h1 {
 		width: 600px;
 		text-align: center;
-		margin: 20vh auto;
+		margin: 5em auto;
 		font-size: 2.5em;
+		@include respond-to(785px) {
+			font-size: 2em;
+		}
+		@include respond-to(600px) {
+			width: 100%;
+		}
 	}
 }
 #about-blocks {
@@ -295,15 +322,27 @@ main {
 	width: 80%;
 	margin: 0 auto;
 	justify-content: space-between;
+	@include respond-to(600px) {
+		display: block
+	}
 }
 .about-block {
 	width: 32%;
+	@include respond-to(600px) {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	.about-text-container {
 		width: 90%;
 		margin: 7vh auto;
 		height: 25em;
 		@include respond-to(980px) {
 			margin: 3vh auto;
+		}
+		@include respond-to(600px) {
+			width: 100%;
+			height: 12em;
 		}
 	}
 	img {
@@ -337,11 +376,22 @@ main {
 		width: 200px;
 		height: 200px;
 	}
+	@include respond-to(785px) {
+		width: 150px;
+		height: 150px;
+	}
+	@include respond-to(600px) {
+		width: 200px;
+		height: 200px;
+	}
 }
 
 .menu {
 	width: 60%;
-	margin: 10vh auto;
+	margin: 100px auto;
+	@include respond-to(785px) {
+		width: 90%;
+	}
 	.menu-h1-div {
 		margin: 10vh auto;
 		text-align: center;
@@ -360,8 +410,6 @@ main {
 		border-bottom: 3px solid $yellow;
 	}
 	.contact-info {
-		display: flex;
-		flex-direction: column;
 		p {
 			width: 100%;
 			text-align: left;
@@ -369,9 +417,23 @@ main {
 		i {
 			margin-left: 5px;
 		}
+		@include respond-to(1025px) {
+			width: 400px;
+			margin: 0 auto;
+		}
+		@include respond-to(600px) {
+			width: 100%;
+		}
 	}
 }
-
+iframe {
+	width: 400px;
+	height: 300px;
+	@include respond-to(600px) {
+		width: 100%;
+		height: auto;
+	}
+}
 /*  footer  */
 
 footer {
@@ -400,8 +462,3 @@ footer {
 		color: rgb(135, 135, 135);
 	}
 }
-
-/*  responsive  */
-
-
-

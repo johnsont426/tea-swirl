@@ -10,8 +10,10 @@ $(function(){
 	$(document).scroll(function () {
 		if ($(document).scrollTop() > 100 ) {
 			$('nav').css({'height': '70px', 'opacity': '0.95'});
+			$('.header-social-links').css('display', 'none');
 		}else if ($(document).scrollTop() < 100) {
 			$('nav').css({'height': '', 'opacity': ''});
+			$('.header-social-links').css('display', '');
 		}
 	  var scrollPos = $(document).scrollTop();
 	  $('nav a').each(function () {
