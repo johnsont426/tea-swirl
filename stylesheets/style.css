@@ -85,6 +85,7 @@ a:hover, a:active, a:visited {
   to {
     transform: rotate(360deg); } }
 header {
+  position: relative;
   height: 95vh; }
   header .header-text {
     width: 80%;
@@ -185,10 +186,11 @@ nav {
 /*  main  */
 main {
   position: relative;
-  border-bottom: 1px solid #f0eeee; }
+  border-bottom: 1px solid #ccc5c5; }
 
 .bg {
   width: 100%;
+  opacity: 0.9;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -200,6 +202,7 @@ main {
       background-repeat: no-repeat;
       background-size: cover; } }
   .bg.bg-1 {
+    opacity: 1;
     background-image: url("../images/header-bg2.jpg");
     height: 85vh;
     background-position: center bottom;
@@ -380,25 +383,28 @@ iframe {
       height: auto; } }
 
 /*  footer  */
-footer h1 {
-  font-size: 1.5em;
-  width: 200px;
-  text-align: center;
-  margin: 30px auto;
-  font-family: 'Roboto Condensed', sans-serif; }
-footer .social {
-  margin: 40px auto;
-  font-size: 1.2em;
-  width: 100px;
-  text-align: center;
+footer {
   display: flex;
-  justify-content: space-between; }
-  footer .social a:hover i {
-    color: #ab3e98; }
-footer p {
-  text-align: center;
-  width: 300px;
-  margin: 20px auto;
-  color: #878787; }
+  flex-direction: column; }
+  footer h1 {
+    font-size: 1.5em;
+    width: 200px;
+    text-align: center;
+    margin: 30px auto;
+    font-family: 'Roboto Condensed', sans-serif; }
+  footer .social {
+    margin: 40px auto;
+    font-size: 1.4em;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between; }
+    footer .social a:hover i {
+      color: #ab3e98; }
+  footer p {
+    text-align: center;
+    width: 300px;
+    margin: 20px auto;
+    color: #878787; }
 
 /*# sourceMappingURL=style.css.map */

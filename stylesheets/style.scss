@@ -100,6 +100,7 @@ a {
 	to { transform: rotate(360deg); }
 }
 header {
+	position: relative;
 	height: 95vh;
 	.header-text {
 		width: 80%;
@@ -213,10 +214,11 @@ nav {
 /*  main  */
 main {
 	position: relative;
-	border-bottom: 1px solid rgb(240, 238, 238);
+	border-bottom: 1px solid darken(rgb(240, 238, 238), 15%);
 }
 .bg {
 	width: 100%;
+	opacity: 0.9;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -228,6 +230,7 @@ main {
   	background-size: cover;
   }
   &.bg-1 {
+  	opacity: 1;
   	background-image: url('../images/header-bg2.jpg');
   	height: 85vh;
   	background-position: center bottom;
@@ -437,6 +440,8 @@ iframe {
 /*  footer  */
 
 footer {
+	display: flex;
+	flex-direction: column;
 	h1 {
 		font-size: 1.5em;
 		width: 200px;
@@ -446,7 +451,7 @@ footer {
 	}
 	.social {
 		margin: 40px auto;
-		font-size: 1.2em;
+		font-size: 1.4em;
 		width: 100px;
 		text-align: center;
 		display: flex;
