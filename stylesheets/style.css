@@ -152,9 +152,9 @@ header {
     height: 66px;
     width: 66px;
     margin-right: 8px; }
-    .logo .logo-img:hover {
-      transform-origin: 55% 50%;
-      animation: circle 1.5s 2 linear; }
+  .logo:hover .logo-img {
+    transform-origin: 55% 50%;
+    animation: circle 1.5s 2 linear; }
   .logo h1 {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.3em;
