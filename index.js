@@ -31,6 +31,11 @@ $(function(){
 	});
 
 	$(document).scroll(function () {
+		// var $movebg = $(window).scrollTop() * -0.3;
+  // 	$('.bg-1').css('background-positionY', ($movebg) + 'px');
+  // 	$('.bg-2, .bg-3').css('background-positionY', ($movebg) + 'px');
+  // 	$('.bg-4').css('background-positionY', ($movebg + 400) + 'px');
+
 		if ($(document).scrollTop() > 100 ) {
 			$('nav').css({'height': '70px', 'opacity': '0.95'});
 			$('.header-social-links').css('display', 'none');
